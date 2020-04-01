@@ -27,6 +27,7 @@ namespace Abc.Tests.Infra {
                 return new MeasureData();
             }
 
+            protected override string GetId(Measure entity) => entity?.Data?.Id;
         }
 
         [TestInitialize] public override void TestInitialize() {

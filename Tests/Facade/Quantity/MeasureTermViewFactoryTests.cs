@@ -31,8 +31,8 @@ namespace Abc.Tests.Facade.Quantity
         [TestMethod]
         public void CreateViewTest()
         {
-            var data = GetRandom.Object<MeasureData>();
-            var view = MeasureViewFactory.Create(new Measure(data));
+            var data = GetRandom.Object<MeasureTermData>();
+            var view = MeasureTermViewFactory.Create(new MeasureTerm(data));
 
             testArePropertyValuesEqual(view, data);
 

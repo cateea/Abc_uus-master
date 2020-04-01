@@ -12,5 +12,12 @@ namespace Abc.Facade.Quantity
             Copy.Members(view, d);
             return new MeasureTerm(d);
         }
+
+        public static MeasureTermView Create(MeasureTerm obj)
+        {
+            var v = new MeasureTermView();
+            Copy.Members(obj.Data, v);
+            return v;
+        }
     }
 }

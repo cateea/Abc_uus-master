@@ -4,7 +4,7 @@ using Abc.Facade.Quantity;
 
 namespace Abc.Pages.Quantity {
 
-    public abstract class MeasuresPage : BasePage<IMeasuresRepository, Measures, MeasureView, MeasureDataData> {
+    public abstract class MeasuresPage : BasePage<IMeasuresRepository, Measure, MeasureView, MeasureDataData> {
 
         protected internal MeasuresPage(IMeasuresRepository r = null): base(r) {
             PageTitle = "Measures";
@@ -14,11 +14,11 @@ namespace Abc.Pages.Quantity {
 
         protected internal override string getPageUrl() => "/Quantity/Measures";
 
-        protected internal override Measures toObject(MeasureView view) {
+        protected internal override Measure toObject(MeasureView view) {
             return MeasureViewFactory.Create(view);
         }
 
-        protected internal override MeasureView toView(Measures obj) {
+        protected internal override MeasureView toView(Measure obj) {
             return MeasureViewFactory.Create(obj);
         }
 

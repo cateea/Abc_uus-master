@@ -8,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Abc.Tests.Pages
 {
     [TestClass]
-    public class BasePageTests : AbstractClassTests<BasePage<IMeasuresRepository, Measures, MeasureView, MeasureDataData>, PageModel>
+    public class BasePageTests : AbstractClassTests<BasePage<IMeasuresRepository, Measure, MeasureView, MeasureDataData>, PageModel>
     {
         [TestInitialize] public override void TestInitialize()
         {
@@ -16,7 +16,7 @@ namespace Abc.Tests.Pages
             obj = new TestClass(new TestRepository());
         }
 
-        private class TestClass : BasePage<IMeasuresRepository, Measures,MeasureView, MeasureDataData>
+        private class TestClass : BasePage<IMeasuresRepository, Measure,MeasureView, MeasureDataData>
         {
             protected internal TestClass(IMeasuresRepository r = null) : base(r) => PageTitle = "Measures";
             
@@ -25,11 +25,11 @@ namespace Abc.Tests.Pages
 
             protected internal override string getPageUrl() => "/Quantity/Measures";
 
-            protected internal override Measures toObject(MeasureView view) =>MeasureViewFactory.Create(view);
+            protected internal override Measure toObject(MeasureView view) =>MeasureViewFactory.Create(view);
 
-            protected internal override MeasureView toView(Measures obj) => MeasureViewFactory.Create(obj);
+            protected internal override MeasureView toView(Measure obj) => MeasureViewFactory.Create(obj);
         }
-        private class TestRepository : BaseTestRepository<Measures, MeasureDataData>, IMeasuresRepository { }
+        private class TestRepository : BaseTestRepository<Measure, MeasureDataData>, IMeasuresRepository { }
 
         [TestMethod] public void CreateBasePageWithRepositoryTest()
         {

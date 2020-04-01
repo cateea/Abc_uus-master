@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Abc.Facade.Quantity
 {
-    class UnitTermsFactory
+    class UnitTermView
     {
     }
 }

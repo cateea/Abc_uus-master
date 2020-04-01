@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Abc.Facade.Common;
 
 namespace Abc.Facade.Quantity
 {
-    class UnitFactorView
-    {
-    }
+    public sealed class UnitFactorView : PeriodView { }
 }

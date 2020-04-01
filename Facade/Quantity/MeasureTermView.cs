@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Abc.Facade.Quantity
 {
-    class MeasureTermView
+    public class MeasureTermView
     {
     }
 }

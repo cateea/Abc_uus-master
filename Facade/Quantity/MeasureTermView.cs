@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Abc.Facade.Common;
 
 namespace Abc.Facade.Quantity
 {
-    public class MeasureTermView
+    public sealed class MeasureTermView : PeriodView
     {
     }
 }

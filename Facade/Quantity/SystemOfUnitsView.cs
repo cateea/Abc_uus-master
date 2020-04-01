@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Abc.Facade.Common;
 
 namespace Abc.Facade.Quantity
 {
-    class SystemOfUnitsView
+    public sealed class SystemOfUnitsView : DefinedView
     {
     }
 }

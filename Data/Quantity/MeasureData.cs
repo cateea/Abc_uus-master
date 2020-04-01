@@ -2,7 +2,7 @@
 
 namespace Abc.Data.Quantity
 {
-    public sealed class MeasureDataData: DefinedEntityData
+    public sealed class MeasureData: DefinedEntityData
     {
     }
 }

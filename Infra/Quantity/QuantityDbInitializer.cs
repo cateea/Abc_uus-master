@@ -7,7 +7,7 @@ namespace Abc.Infra.Quantity
     public static class QuantityDbInitializer
     {
 
-        internal static MeasureDataData time = new MeasureDataData
+        internal static MeasureData time = new MeasureData
         {
             Id = "Time",
             Name = "Time",
@@ -15,14 +15,14 @@ namespace Abc.Infra.Quantity
             Definition = "In physical science, time is defined as a measurement, " +
                          "or as what the clock face reads."
         };
-        internal static MeasureDataData length = new MeasureDataData
+        internal static MeasureData length = new MeasureData
         {
             Id = "Length",
             Name = "Length",
             Code = "l",
             Definition = "The measurement or extent of something from end to end."
         };
-        internal static MeasureDataData mass = new MeasureDataData
+        internal static MeasureData mass = new MeasureData
         {
             Id = "Mass",
             Name = "Mass",
@@ -31,7 +31,7 @@ namespace Abc.Infra.Quantity
                          "its acceleration under a given force or by the force exerted on " +
                          "it by a gravitational field"
         };
-        internal static MeasureDataData current = new MeasureDataData
+        internal static MeasureData current = new MeasureData
         {
             Id = "Current",
             Name = "Electric Current",
@@ -44,7 +44,7 @@ namespace Abc.Infra.Quantity
                          "electrolyte, or by both ions and electrons such as in an " +
                          "ionized gas (plasma)"
         };
-        internal static MeasureDataData temperature = new MeasureDataData
+        internal static MeasureData temperature = new MeasureData
         {
             Id = "Temperature",
             Name = "Thermodynamic Temperature",
@@ -52,7 +52,7 @@ namespace Abc.Infra.Quantity
             Definition = "Thermodynamic temperature is the absolute measure of temperature " +
                          "and is one of the principal parameters of thermodynamics."
         };
-        internal static MeasureDataData substance = new MeasureDataData
+        internal static MeasureData substance = new MeasureData
         {
             Id = "Substance",
             Name = "Amount of Substance",
@@ -63,7 +63,7 @@ namespace Abc.Infra.Quantity
                          "atoms, ions, electrons, or other, depending on the context. " +
                          "It is sometimes referred to as the chemical amount."
         };
-        internal static MeasureDataData luminous = new MeasureDataData
+        internal static MeasureData luminous = new MeasureData
         {
             Id = "Luminous",
             Name = "Luminous Intensity",
@@ -75,7 +75,7 @@ namespace Abc.Infra.Quantity
                          "of the human eye"
         };
 
-        internal static List<MeasureDataData> measures => new List<MeasureDataData> {
+        internal static List<MeasureData> measures => new List<MeasureData> {
             time, length, mass, current,temperature,substance,luminous
         };
 

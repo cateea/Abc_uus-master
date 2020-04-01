@@ -1,10 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Abc.Aids;
+using Abc.Data.Quantity;
+using Abc.Domain.Quantity;
 
 namespace Abc.Facade.Quantity
 {
-    class MeasureTermViewFactory
+   public static class MeasureTermViewFactory
     {
+        public static MeasureTerm Create(MeasureTermView view)
+        {
+            var d = new MeasureTermData();
+            Copy.Members(view, d);
+            return new MeasureTerm(d);
+        }
     }
 }

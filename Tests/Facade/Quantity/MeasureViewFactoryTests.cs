@@ -23,7 +23,7 @@ namespace Abc.Tests.Facade.Quantity {
         }
 
         [TestMethod] public void CreateViewTest() {
-            var data = GetRandom.Object<MeasureDataData>();
+            var data = GetRandom.Object<MeasureData>();
             var view = MeasureViewFactory.Create(new Measure(data));
 
             testArePropertyValuesEqual(view, data);

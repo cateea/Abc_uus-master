@@ -7,22 +7,25 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Abc.Tests.Facade.Quantity
 {
     [TestClass]
-    public class SystemOfUnitsFactoryTests : BaseTests
+    public class SystemOfUnitsViewFactoryTests : BaseTests
     {
 
         [TestInitialize]
         public virtual void TestInitialize()
         {
-            type = typeof(SystemOfUnitsView);
+            type = typeof(SystemOfUnitsViewFactory);
         }
 
-        [TestMethod] public void CreateTest() { }
+        [TestMethod]
+        public void CreateTest()
+        {
+        }
 
         [TestMethod]
         public void CreateObjectTest()
         {
             var view = GetRandom.Object<SystemOfUnitsView>();
-            var data = SystemOfUnitsFactory.Create(view).Data;
+            var data = SystemOfUnitsViewFactory.Create(view).Data;
 
             testArePropertyValuesEqual(view, data);
 
@@ -32,12 +35,10 @@ namespace Abc.Tests.Facade.Quantity
         public void CreateViewTest()
         {
             var data = GetRandom.Object<SystemOfUnitsData>();
-            var view = SystemOfUnitsFactory.Create(new SystemOfUnits(data));
+            var view = SystemOfUnitsViewFactory.Create(new SystemOfUnits(data));
 
             testArePropertyValuesEqual(view, data);
 
         }
-
     }
-
 }

@@ -1,6 +1,12 @@
-﻿namespace Abc.Facade.Quantity
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace Abc.Facade.Quantity
 {
-    class UnitTermView
+    public sealed class UnitTermView : CommonTermView
     {
+        [Required]
+        [DisplayName("Unit")]
+        public string MasterId { get; set; }
     }
 }
